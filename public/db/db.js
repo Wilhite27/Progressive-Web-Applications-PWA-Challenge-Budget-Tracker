@@ -8,7 +8,7 @@ request.onupgradeneeded = ({target }) => {
     let db = target.result;
 
     db.createObjectStore('pending', {
-        autoIncrement: true;
+        autoIncrement: true,
     });
 };
 request.onsuccess = ({target }) => {
