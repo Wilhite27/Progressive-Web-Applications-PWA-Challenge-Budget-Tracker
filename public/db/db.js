@@ -1,8 +1,7 @@
-const { request } = require("express");
 
 const indexedDB = window.indexedDB || window.mozIndexedDB || webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
 let db; 
-const req = indexedDB.open('budget', 1);
+const request = indexedDB.open('budget', 1);
 
 request.onupgradeneeded = ({target }) => {
     let db = target.result;
